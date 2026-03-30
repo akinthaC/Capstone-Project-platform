@@ -50,10 +50,10 @@ jobs:
 
       - name: Create a new boot disk image with the previous image name
         run: |
-             gcloud compute images create ${{env.IMAGE_NAME}} \
-            --source-disk=${{env.VM_NAME}} \
-            --source-disk-zone=${{env.ZONE}} \
-            --storage-location=${{env.REGION}}
+          gcloud compute images create ${{ env.IMAGE_NAME }} \
+            --source-disk=${{ env.VM_NAME }} \
+            --source-disk-zone=${{ env.ZONE }} \
+            --storage-location=${{ env.REGION }}
  
 
           
