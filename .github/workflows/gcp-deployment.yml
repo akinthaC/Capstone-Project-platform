@@ -46,6 +46,7 @@ jobs:
 
       - name: delete the boot disk image
         run: gcloud compute images delete ${{env.IMAGE_NAME}}
+        continue-on-error: true
 
       - name: Create a new boot disk image with the previous image name
         run: |
